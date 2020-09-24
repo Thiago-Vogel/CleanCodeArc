@@ -1,0 +1,15 @@
+E:\Repositories\CleanCodeArc\Web\Infrastructure\bin\Debug\netcoreapp3.0\Infrastructure.deps.json
+E:\Repositories\CleanCodeArc\Web\Infrastructure\bin\Debug\netcoreapp3.0\Infrastructure.runtimeconfig.json
+E:\Repositories\CleanCodeArc\Web\Infrastructure\bin\Debug\netcoreapp3.0\Infrastructure.runtimeconfig.dev.json
+E:\Repositories\CleanCodeArc\Web\Infrastructure\bin\Debug\netcoreapp3.0\Infrastructure.dll
+E:\Repositories\CleanCodeArc\Web\Infrastructure\bin\Debug\netcoreapp3.0\Infrastructure.pdb
+E:\Repositories\CleanCodeArc\Web\Infrastructure\bin\Debug\netcoreapp3.0\AppCore.dll
+E:\Repositories\CleanCodeArc\Web\Infrastructure\bin\Debug\netcoreapp3.0\AppCore.pdb
+E:\Repositories\CleanCodeArc\Web\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.csprojAssemblyReference.cache
+E:\Repositories\CleanCodeArc\Web\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.AssemblyInfoInputs.cache
+E:\Repositories\CleanCodeArc\Web\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.AssemblyInfo.cs
+E:\Repositories\CleanCodeArc\Web\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.csproj.CoreCompileInputs.cache
+E:\Repositories\CleanCodeArc\Web\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.csproj.CopyComplete
+E:\Repositories\CleanCodeArc\Web\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.dll
+E:\Repositories\CleanCodeArc\Web\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.pdb
+E:\Repositories\CleanCodeArc\Web\Infrastructure\obj\Debug\netcoreapp3.0\Infrastructure.genruntimeconfig.cache

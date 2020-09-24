@@ -1,0 +1,9 @@
+E:\Repositories\CleanCodeArc\Web\AppCore\bin\Debug\netstandard2.0\AppCore.deps.json
+E:\Repositories\CleanCodeArc\Web\AppCore\bin\Debug\netstandard2.0\AppCore.dll
+E:\Repositories\CleanCodeArc\Web\AppCore\bin\Debug\netstandard2.0\AppCore.pdb
+E:\Repositories\CleanCodeArc\Web\AppCore\obj\Debug\netstandard2.0\AppCore.csprojAssemblyReference.cache
+E:\Repositories\CleanCodeArc\Web\AppCore\obj\Debug\netstandard2.0\AppCore.AssemblyInfoInputs.cache
+E:\Repositories\CleanCodeArc\Web\AppCore\obj\Debug\netstandard2.0\AppCore.AssemblyInfo.cs
+E:\Repositories\CleanCodeArc\Web\AppCore\obj\Debug\netstandard2.0\AppCore.csproj.CoreCompileInputs.cache
+E:\Repositories\CleanCodeArc\Web\AppCore\obj\Debug\netstandard2.0\AppCore.dll
+E:\Repositories\CleanCodeArc\Web\AppCore\obj\Debug\netstandard2.0\AppCore.pdb
