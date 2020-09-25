@@ -16,29 +16,29 @@ namespace AppCore.Services
             _repository = repository;
         }
 
-        public Task<T> AddAsync(T entity)
+        public async Task<T> AddAsync(T entity)
         {
-            return _repository.AddAsync(entity);
+            return await _repository.AddAsync(entity);
         }
 
-        public Task<T> DeleteAsync(T entity)
+        public async Task<T> DeleteAsync(T entity)
         {
-            return _repository.DeleteAsync(entity);
+            return await _repository.DeleteAsync(entity);
         }
 
-        public Task<T> UpdateAsync(T entity)
+        public async Task<T> UpdateAsync(T entity)
         {
-            return _repository.UpdateAsync(entity);
+            return await _repository.UpdateAsync(entity);
         }
 
-        public Task<IEnumerable<T>> GetAll()
+        public async Task<IEnumerable<T>> GetAll()
         {
-            return _repository.GetAll();
+            return await _repository.GetAll();
         }
 
-        public Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> filter, int limit = 50, int page = 1)
+        public async Task<IEnumerable<T>> GetAsync(Expression<Func<T, bool>> filter, int limit = 50, int page = 1)
         {
-            return _repository.GetAsync(filter, limit, page);
+            return await _repository.GetAsync(filter, limit, page);
         }
     }
 }

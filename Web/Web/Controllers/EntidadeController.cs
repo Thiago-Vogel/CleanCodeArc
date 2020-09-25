@@ -25,6 +25,7 @@ namespace Web.Controllers
         [Route("Entidade/Get")]
         public async Task<string> Get([FromQuery] EntidadeParams query)
         {
+            query = query != null ? query : new EntidadeParams();
             Expression<Func<Entidade, bool>> expression = e =>
                  e.ativo == query.ativo &&
                  (e.Id == query.id || query.id == 0) &&
