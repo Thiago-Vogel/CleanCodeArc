@@ -13,6 +13,14 @@ namespace IoC
     {
         public static void RegisterServices(IServiceCollection services, IConfiguration _configuration)
         {
+            //Clients
+            var currentUrl = _configuration.GetSection("AppUrl").Value;
+            services.AddHttpClient("Self", client =>
+            {
+                client.BaseAddress = new Uri(currentUrl);
+                client.Timeout = TimeSpan.FromMinutes(1);
+            });
+
             //Infrastructure
             services.AddDbContext<EF_Context>(options => options.UseSqlServer(_configuration.GetConnectionString("SqlServer"),
                b => b.MigrationsAssembly("Infrastructure")));
