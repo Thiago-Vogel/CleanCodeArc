@@ -1,5 +1,5 @@
 # CleanCodeArc
-Sample project for CleanCode Tests and Implementations
+Sample project for CleanCode NetCore Applications and Implementations
 
 # Project Dependencies
 * It's required to have a local instance of microsft sql server running on your machine
