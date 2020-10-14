@@ -10,5 +10,6 @@ Project created by Thiago Vogel Motta
 
 # Updates 
 * 1 - First commit version of a sample template
-* 2 - Upcoming...(Security methods and container deploy)
+* 2 - Tests and Dependency Inversion
+* 3 - Upcoming...(Security methods and container deploy)
 
