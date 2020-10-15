@@ -4,14 +4,17 @@ using System.Linq;
 using System.Threading.Tasks;
 using AppCore.Implementations;
 using AppCore.Services;
+using HealthChecks.UI.Client;
 using IoC;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Web.HealthChecks;
 
 namespace Web
 {
@@ -30,6 +33,8 @@ namespace Web
             
             services.AddControllers();
             services.AddSwaggerGen();
+            services.AddHealthChecks()
+                .AddCheck<BasicHealthCheck>("Running");
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -52,6 +57,13 @@ namespace Web
                 endpoints.MapControllerRoute(
                     name:"default", 
                     pattern:"{controller}/{action}/{id}");
+                endpoints.MapHealthChecks("/health");
+            });
+
+            app.UseHealthChecks("/hc", new HealthCheckOptions()
+            {
+                Predicate = _ => true,
+                ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
             });
         }
 
