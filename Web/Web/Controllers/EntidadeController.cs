@@ -2,6 +2,8 @@
 using AppCore.Handlers;
 using AppCore.Implementations;
 using AppCore.Models;
+using Microsoft.AspNetCore.Authorization.Infrastructure;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.Extensions.Logging;
@@ -15,6 +17,7 @@ using System.Threading.Tasks;
 namespace Web.Controllers
 {
     [ApiController]
+
     public class EntidadeController : ControllerBase
     {
         IEF_Service<Entidade> entidades;
@@ -27,6 +30,7 @@ namespace Web.Controllers
 
         [HttpGet]
         [Route("Entidade/Get")]
+        [Authorize(Roles = new string[] { "ADM" })]
         public async Task<string> Get([FromQuery] EntidadeParams query)
         {
             query = query != null ? query : new EntidadeParams();

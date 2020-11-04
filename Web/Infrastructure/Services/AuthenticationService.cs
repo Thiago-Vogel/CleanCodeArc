@@ -21,7 +21,8 @@ namespace Infrastructure.Services
             //You should implement something to get your users on your environment
             _users = new List<User>
             {
-                new User { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test" }
+                new User { Id = 1, FirstName = "Test", LastName = "User", Username = "test", Password = "test", Role= Role.adm },
+                new User { Id = 2, FirstName = "Test", LastName = "User", Username = "test2", Password = "test", Role= Role.common }
             };
         }
 

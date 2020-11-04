@@ -62,7 +62,7 @@ namespace AppCore.Handlers
                     context.Items["User"] = service.GetById(userId);
                 }
             }
-            catch
+            catch(Exception ex)
             {
                 // do nothing if jwt validation fails
                 // user is not attached to context so request won't have access to secure routes
