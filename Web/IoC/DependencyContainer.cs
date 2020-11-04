@@ -2,6 +2,7 @@
 using AppCore.Services;
 using Infrastructure.DataTypes;
 using Infrastructure.Repositories;
+using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -25,9 +26,11 @@ namespace IoC
             services.AddDbContext<EF_Context>(options => options.UseSqlServer(_configuration.GetConnectionString("SqlServer"),
                b => b.MigrationsAssembly("Infrastructure")));
             services.AddScoped(typeof(IEF_Repository<>), typeof(EF_Repository<>));
+            services.AddScoped<IAuthenticationService,AuthenticationService>();
 
             //AppCore
             services.AddScoped(typeof(IEF_Service<>), typeof(EF_Service<>));
+            services.AddScoped<IAuthorizeService, AuthorizeService>();
         }
     }
 }

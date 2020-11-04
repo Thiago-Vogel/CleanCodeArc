@@ -1,8 +1,10 @@
 ﻿using AppCore.Dtos;
+using AppCore.Handlers;
 using AppCore.Implementations;
 using AppCore.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -13,14 +15,16 @@ using System.Threading.Tasks;
 namespace Web.Controllers
 {
     [ApiController]
-    public class EntidadeController:ControllerBase
+    public class EntidadeController : ControllerBase
     {
         IEF_Service<Entidade> entidades;
-        public EntidadeController(IEF_Service<Entidade> _entidades)
+        ILogger<EntidadeController> logger;
+        public EntidadeController(IEF_Service<Entidade> _entidades, ILogger<EntidadeController> _logger)
         {
+            logger = _logger;
             entidades = _entidades;
         }
-        
+
         [HttpGet]
         [Route("Entidade/Get")]
         public async Task<string> Get([FromQuery] EntidadeParams query)
@@ -32,11 +36,19 @@ namespace Web.Controllers
                  (e.data >= query.data || query.data == null) &&
                  (e.texto == query.texto || query.texto == null) &&
                  (e.valor >= query.valor || query.valor == 0);
-        
-            var obj = await entidades.GetAsync(expression,query.limit,query.page);
+
+            var obj = await entidades.GetAsync(expression, query.limit, query.page);
             return JsonConvert.SerializeObject(obj);
         }
-        
+
+        [HttpGet]
+        [Route("Entidade/ThrowException")]
+        public string ThrowException()
+        {
+            throw new Exception("Teste");
+        }
+
+
         [HttpPost]
         [Route("Entidade/Post")]
         public async Task<string> Post(Entidade entity)
